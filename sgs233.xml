@@ -1,4 +1,4 @@
-<FDM_CONFIG NAME="sgs233" VERSION="1.65" RELEASE="BETA">
+<FDM_CONFIG NAME="sgs233" VERSION="1.65" >
 <!--
   File:     sgs233.xml
   Author:   Aero-Matic v 0.7
@@ -94,6 +94,12 @@
       MAX      0.35
       OUTPUT  fcs/rudder-pos-rad
    </COMPONENT>
+   <COMPONENT NAME="Spoiler Control" TYPE="AEROSURFACE_SCALE">
+      INPUT   fcs/spoiler-cmd-norm
+      MIN     0
+      MAX     1.04895 
+      OUTPUT  fcs/spoiler-pos-rad
+   </COMPONENT>
    <COMPONENT NAME="Flaps Control" TYPE="KINEMAT">
      INPUT   fcs/flap-cmd-norm
      DETENTS 3
@@ -129,10 +135,10 @@
        0.21    1.400
        0.60    0.710
     </COEFFICIENT>
-    <COEFFICIENT NAME="dCLsb" TYPE="VALUE">
-       Delta_Lift_due_to_speedbrake
-       aero/qbar-psf|metrics/Sw-sqft|fcs/speedbrake-pos-norm
-       -0.05
+    <COEFFICIENT NAME="dCLsp" TYPE="VALUE">
+       Delta_Lift_due_to_spoilers
+       aero/qbar-psf|metrics/Sw-sqft|fcs/spoiler-pos-rad
+       -0.08
     </COEFFICIENT>
     <COEFFICIENT NAME="CLde" TYPE="VALUE">
        Lift_due_to_Elevator_Deflection
@@ -177,10 +183,10 @@
        aero/qbar-psf|metrics/Sw-sqft|gear/gear-pos-norm
        0.001
     </COEFFICIENT>
-    <COEFFICIENT NAME="CDsb" TYPE="VALUE">
-       Drag_due_to_speedbrakes
-       aero/qbar-psf|metrics/Sw-sqft|fcs/speedbrake-pos-norm
-       0.01
+    <COEFFICIENT NAME="CDsp" TYPE="VALUE">
+       Drag_due_to_spoilers
+       aero/qbar-psf|metrics/Sw-sqft|fcs/spoiler-pos-rad
+       0.02
     </COEFFICIENT>
     <COEFFICIENT NAME="CDbeta" TYPE="VECTOR">
        Drag_due_to_sideslip
@@ -227,8 +233,8 @@
        2
        velocities/mach-norm
        aero/qbar-psf|metrics/Sw-sqft|metrics/bw-ft|fcs/left-aileron-pos-rad
-       0.0       0.08
-       2.0       0.08
+       0.0       0.06
+       2.0       0.020
     </COEFFICIENT>
     <COEFFICIENT NAME="Cldr" TYPE="VALUE">
        Roll_moment_due_to_rudder
