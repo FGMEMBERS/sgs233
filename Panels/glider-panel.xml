@@ -11,7 +11,7 @@ _______________________________________________________________________
 
 <PropertyList>
  <name>Glider Panel</name>
- <background>Aircraft/sgs126/Panels/Textures/glider-panel.rgb</background>
+ <background>Aircraft/sgs233/Panels/Textures/glider-panel.rgb</background>
  <w>512</w>
  <h>512</h>
  <x-offset>256</x-offset> 
