@@ -49,6 +49,20 @@ David Culp,  davidculp2@comcast.net
     <path>Aircraft/sgs233/Models/sgs233.ac</path>
   </model>
 
+  <ai>
+   <scenario>thermal_demo</scenario>
+  </ai>
+
 </sim>
+
+<controls>
+  <elevator-trim>0.00367</elevator-trim>
+</controls>
+
+<environment>
+ <clouds>
+  <status>false</status>
+ </clouds>
+</environment>
 
 </PropertyList>
