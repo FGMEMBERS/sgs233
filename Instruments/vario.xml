@@ -31,7 +31,7 @@ properties' values.
   <layer>
    <name>background</name>
    <texture>
-    <path>Aircraft/sgs126/Instruments/Textures/glider-misc.rgb</path>
+    <path>Aircraft/sgs233/Instruments/Textures/glider-misc.rgb</path>
     <x1>0.0</x1>
     <y1>0.890625</y1>
     <x2>0.1953125</x2>

@@ -7,7 +7,7 @@
   <layer>
    <name>tape</name>
    <texture>   
-    <path>Aircraft/sgs126/Instruments/Textures/glider-misc.rgb</path>
+    <path>Aircraft/sgs233/Instruments/Textures/glider-misc.rgb</path>
     <x1>0</x1>
     <y1>0</y1>
     <x2>0.1254902</x2>
@@ -19,7 +19,7 @@
   <layer>
    <name>string</name>
    <texture>
-    <path>Aircraft/sgs126/Instruments/Textures/glider-misc.rgb</path>
+    <path>Aircraft/sgs233/Instruments/Textures/glider-misc.rgb</path>
     <x1>0.0470588</x1>
     <y1>0.0470588</y1>
     <x2>0.0823529</x2>
