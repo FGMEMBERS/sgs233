@@ -41,7 +41,7 @@ David Culp,  davidculp2@comcast.net
   <systems>
    <electrical>
     <path>Aircraft/sgs233/null-electrical.xml</path>
-    <servicable archive="y">false</servicable>
+    <serviceable archive="y">false</serviceable>
    </electrical>
   </systems>
 
