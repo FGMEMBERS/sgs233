@@ -49,18 +49,6 @@ David Culp,  davidculp2@comcast.net
     <path>Aircraft/sgs233/Models/sgs233.ac</path>
   </model>
 
-
- <!-- puts a thermal over the control tower at KSFO -->
- <ai>
-   <entry>
-    <type>thermal</type>
-    <latitude type="double">37.61633</latitude>
-    <longitude type="double">-122.38334</longitude>
-    <strength-fps type="double">8.33</strength-fps>
-    <diameter-ft type="double">4000.0</diameter-ft>
-   </entry>
- </ai>
-
 </sim>
 
 </PropertyList>
