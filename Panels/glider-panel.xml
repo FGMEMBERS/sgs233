@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<!--
+Generic Glider instrument panel.
+David Culp, davidculp2@comcast.net, July 2003.
+Based on original art by Max Roodveldt, roodvmax@xs4all.nl, 
+used with permission.
+License:  GPL
+_______________________________________________________________________
+-->
+
+<PropertyList>
+ <name>Glider Panel</name>
+ <background>Aircraft/sgs126/Panels/Textures/glider-panel.rgb</background>
+ <w>512</w>
+ <h>512</h>
+ <x-offset>256</x-offset> 
+ <y-offset>0</y-offset>
+ <view-height>768</view-height>
+
+ <instruments>
+
+  <instrument include="../../Instruments/asi-160-knot.xml">
+   <name>Airspeed Indicator</name>
+   <x>180</x>
+   <y>100</y>
+   <w>90</w>
+   <h>90</h>
+  </instrument>
+
+  <instrument include="../../Instruments/altimeter.xml">
+   <name>Altimeter</name>
+   <x>330</x>
+   <y>100</y>
+   <w>90</w>
+   <h>90</h>
+  </instrument>
+
+  <instrument include="../../Instruments/vertical.xml">
+   <name>Vertical Speed Indicator</name>
+   <x>400</x>
+   <y>50</y>
+   <w>85</w>
+   <h>85</h>
+  </instrument>
+
+  <instrument include="../Instruments/yaw-string.xml">
+   <name>A Piece of Yarn</name>
+   <x>256</x>
+   <y>400</y>
+   <w>32</w>
+   <h>121</h>
+  </instrument>
+
+  <instrument include="../Instruments/netto-vario.xml">
+   <name>NETTO Vario +/- knots</name>
+   <x>257</x>
+   <y>145</y>
+   <w>51</w>
+   <h>28</h>
+  </instrument>
+
+ </instruments>
+
+</PropertyList>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<PropertyList>
+ <name>Yaw String</name>
+ <w-base>32</w-base>
+ <h-base>121</h-base>
+ <layers>
+  <layer>
+   <name>tape</name>
+   <texture>   
+    <path>Aircraft/sgs126/Instruments/Textures/glider-misc.rgb</path>
+    <x1>0</x1>
+    <y1>0</y1>
+    <x2>0.1254902</x2>
+    <y2>0.0509804</y2>
+   </texture>
+   <w>32</w>
+   <h>13</h>
+  </layer>
+  <layer>
+   <name>string</name>
+   <texture>
+    <path>Aircraft/sgs126/Instruments/Textures/glider-misc.rgb</path>
+    <x1>0.0470588</x1>
+    <y1>0.0470588</y1>
+    <x2>0.0823529</x2>
+    <y2>0.4745098</y2>
+   </texture>
+   <w>9</w>
+   <h>109</h>
+   <transformations>
+    <transformation>
+     <type>rotation</type>
+     <property>/fdm/jsbsim/aero/beta-rad</property>
+     <scale>-57.2</scale>
+     <offset>0</offset>
+    </transformation>
+    <transformation>
+     <type>y-shift</type>
+     <offset>58</offset>
+    </transformation>
+   </transformations>
+  </layer> 
+
+  </layers>
+</PropertyList>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+sgs126 JSBSim config file
+David Culp,  davidculp2@comcast.net
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>Schweizer 2-33</description>
+ 
+  <flight-model>jsb</flight-model>
+  <aero>sgs233</aero>
+
+  <startup>
+   <units>feet</units>
+  </startup>
+
+  <presets>
+   <onground>false</onground>
+   <speed-set>knots</speed-set>
+   <airport-id type="string">KSFO</airport-id>
+   <runway type="string">28R</runway>
+   <airspeed-kt type="double">60.0</airspeed-kt>
+   <altitude-ft type="double">3000.0</altitude-ft>
+  </presets>
+  
+  <sound>
+   <audible>true</audible>
+   <path>Aircraft/sgs233/glider-sound.xml</path>
+  </sound>
+
+  <panel>
+   <path>Aircraft/sgs233/Panels/glider-panel.xml</path>
+   <visibility archive="y">true</visibility>
+   <x-offset>256</x-offset>
+  </panel>
+
+  <systems>
+   <electrical>
+    <path>Aircraft/sgs233/null-electrical.xml</path>
+    <servicable archive="y">false</servicable>
+   </electrical>
+  </systems>
+
+  <model>
+    <path>Aircraft/sgs233/Models/sgs233.ac</path>
+  </model>
+
+
+ <!-- puts a thermal over the control tower at KSFO -->
+ <ai>
+   <entry>
+    <type>thermal</type>
+    <latitude type="double">37.61633</latitude>
+    <longitude type="double">-122.38334</longitude>
+    <strength-fps type="double">8.33</strength-fps>
+    <diameter-ft type="double">4000.0</diameter-ft>
+   </entry>
+ </ai>
+
+</sim>
+
+</PropertyList>
