@@ -11,7 +11,7 @@ David Culp,  davidculp2@comcast.net
  <sim>
 
   <description>Schweizer 2-33</description>
-  <author>David Culp</author>
+  <author>David Culp, Captain Slug (3D)</author>
  
   <flight-model>jsb</flight-model>
   <aero>sgs233</aero>
