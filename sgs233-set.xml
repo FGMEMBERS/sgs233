@@ -54,6 +54,13 @@ David Culp,  davidculp2@comcast.net
    <scenario>thermal_demo</scenario>
   </ai>
 
+  <help>
+   <key>
+    <name>j/k</name>
+    <desc>decrease/increase spoilers</desc>
+   </key>
+  </help>
+
 </sim>
 
 <controls>
