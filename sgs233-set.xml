@@ -63,6 +63,7 @@ David Culp,  davidculp2@comcast.net
 
 </sim>
 
+<!-- This binds the joystick's throttle slider to the spoilers. -->
 <nasal>
  <sgs233>
   <script>
