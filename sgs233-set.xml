@@ -63,33 +63,19 @@ David Culp,  davidculp2@comcast.net
 
 </sim>
 
-<controls>
-  <elevator-trim>0.00367</elevator-trim>
-</controls>
-
-<environment>
- <clouds>
-  <status>false</status>
- </clouds>
-</environment>
-
-<!-- This binds the joystick's throttle slider to the spoilers.
-     It works for the Logitech Wingman Extreme Digital 3D joystick.
-     To make make it work with your joystick you need to change the
-     "js-named" tag, and possibly the "axis" tag.  -->
-<input>
- <joysticks>
-  <js-named n="1002">
-   <axis n="3">
-    <binding>
-     <command>property-scale</command>
-     <property>/controls/flight/spoilers</property>
-     <offset type="double">-1.0</offset>
-     <factor type="double">-0.5</factor>
-    </binding>
-   </axis>
-  </js-named>
- </joysticks>
-</input>
+<nasal>
+ <sgs233>
+  <script>
+   var spoilers = props.globals.getNode("/controls/flight/spoilers", 1);
+   controls.throttleAxis = func {
+       val = cmdarg().getNode("setting").getValue();
+       if (size(arg) > 0) {
+           val = -val;
+       }
+       spoilers.setValue((1 - val) / 2);
+   }
+  </script>
+ </sgs233>
+</nasal>
 
 </PropertyList>
