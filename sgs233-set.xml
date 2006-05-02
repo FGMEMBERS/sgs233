@@ -12,7 +12,7 @@ David Culp,  davidculp2@comcast.net
 
   <description>Schweizer 2-33</description>
   <author>David Culp, Captain Slug (3D)</author>
-
+ 
   <flight-model>jsb</flight-model>
   <aero>sgs233</aero>
 
@@ -28,7 +28,7 @@ David Culp,  davidculp2@comcast.net
    <airspeed-kt type="double">60.0</airspeed-kt>
    <altitude-ft type="double">3000.0</altitude-ft>
   </presets>
-
+  
   <sound>
    <path>Aircraft/sgs233/glider-sound.xml</path>
   </sound>
@@ -61,22 +61,53 @@ David Culp,  davidculp2@comcast.net
    </key>
   </help>
 
- </sim>
+</sim>
 
- <!-- This binds the joystick's throttle slider to the spoilers. -->
- <nasal>
-  <sgs233>
-   <script>
-    var spoilers = props.globals.getNode("/controls/flight/speedbrake", 1);
-    controls.throttleAxis = func {
-        val = cmdarg().getNode("setting").getValue();
-        if (size(arg) > 0) {
-            val = -val;
-        }
-        spoilers.setValue((1 + val) / 2);
-    }
-   </script>
-  </sgs233>
- </nasal>
+<!-- This binds the joystick's throttle slider to the spoilers. -->
+<nasal>
+ <sgs233>
+  <script>
+   var spoilers = props.globals.getNode("/controls/flight/spoilers", 1);
+   controls.throttleAxis = func {
+       val = cmdarg().getNode("setting").getValue();
+       if (size(arg) > 0) {
+           val = -val;
+       }
+       spoilers.setValue((1 - val) / 2);
+   }
+  </script>
+ </sgs233>
+</nasal>
+
+<!-- set clouds to match thermal scenario -->
+<environment>
+  <clouds>
+   <status>true</status>
+   <layer n="0">
+    <coverage>scattered</coverage>
+    <elevation-ft>6000</elevation-ft>
+    <thickness-ft>600</thickness-ft>
+    <transition-ft>150</transition-ft>
+    <span-m>40000</span-m>
+   </layer>
+   <layer n="1">
+    <coverage>clear</coverage>
+    <span-m>40000</span-m>
+   </layer>
+   <layer n="2">
+    <coverage>clear</coverage>
+    <span-m>40000</span-m>
+   </layer>
+   <layer n="3">
+    <coverage>clear</coverage>
+    <span-m>40000</span-m>
+   </layer>
+   <layer n="5">
+    <coverage>clear</coverage>
+    <span-m>40000</span-m>
+   </layer>
+  </clouds>
+</environment>
+
 
 </PropertyList>
