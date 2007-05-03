@@ -59,6 +59,10 @@ David Culp,  davidculp2@comcast.net
     <name>j/k</name>
     <desc>decrease/increase spoilers</desc>
    </key>
+   <key>
+    <name>throttle</name>
+    <desc>adjust spoilers</desc>
+   </key>
   </help>
 
 </sim>
