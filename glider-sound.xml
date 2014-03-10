@@ -101,6 +101,18 @@
    </volume>
   </speedbrake>
 
+ <hitch_release>
+   <name>hitch_release</name>
+   <mode>once</mode>
+   <path>Sounds/click.wav</path>
+   <condition>
+     <and>
+       <property>/sim/hitches/winch/open</property>
+       <property>/sim/hitches/aerotow/open</property>
+     </and>
+   </condition>
+ </hitch_release>
+
 </fx>
  
 </PropertyList>

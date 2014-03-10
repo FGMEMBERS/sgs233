@@ -19,7 +19,7 @@ David Culp,  davidculp2@comcast.net
   <startup>
    <units>feet</units>
   </startup>
-
+<!--
   <presets>
    <onground>false</onground>
    <speed-set>knots</speed-set>
@@ -28,7 +28,7 @@ David Culp,  davidculp2@comcast.net
    <airspeed-kt type="double">60.0</airspeed-kt>
    <altitude-ft type="double">3000.0</altitude-ft>
   </presets>
-  
+-->
   <sound>
    <path>Aircraft/sgs233/glider-sound.xml</path>
   </sound>
@@ -49,10 +49,43 @@ David Culp,  davidculp2@comcast.net
   <model>
     <path>Aircraft/sgs233/Models/sgs233.ac</path>
   </model>
-
+<!--
   <ai>
    <scenario>thermal_demo</scenario>
   </ai>
+-->
+  <hitches>
+   <aerotow>
+    <basename_force_jsbsim type="string">nose</basename_force_jsbsim>
+    <local-pos-x type="float"> 2.1</local-pos-x>
+    <local-pos-y type="float"> 0.0</local-pos-y>
+    <local-pos-z type="float">-0.35</local-pos-z>
+    <force-is-calculated-by-other type="bool">false</force-is-calculated-by-other>
+    <tow>
+     <brake-force type="float">10000</brake-force>
+     <elastic-constant type="float">9000</elastic-constant>
+    </tow>
+   </aerotow>
+   <winch>
+    <basename_force_jsbsim type="string">belly</basename_force_jsbsim>
+    <local-pos-x type="float"> 0.2</local-pos-x>
+    <local-pos-y type="float"> 0.0</local-pos-y>
+    <local-pos-z type="float">-0.7</local-pos-z>
+    <automatic-release-angle-deg type="float">70.</automatic-release-angle-deg>
+    <winch>
+     <initial-tow-length-m type="float">1000.</initial-tow-length-m>
+     <max-tow-length-m type="float">1500.</max-tow-length-m> 
+     <max-force-N type="float">9000.</max-force-N>
+     <max-power-kW type="float">100.</max-power-kW>
+     <max-spool-speed-m-s type="float">30.</max-spool-speed-m-s>
+     <rel-speed alias="/sim/hitches/winch/winch/actual-spool-speed-m-s"/>
+    </winch>
+    <tow>
+     <break-force type="float">10000</break-force>
+     <elastic-constant type="float">40000</elastic-constant>
+    </tow>
+   </winch>
+  </hitches>
 
   <help>
    <key>
@@ -63,9 +96,90 @@ David Culp,  davidculp2@comcast.net
     <name>throttle</name>
     <desc>adjust spoilers</desc>
    </key>
+   <key>  
+    <name></name>
+    <desc></desc>
+   </key>
+   <key>
+    <name>Ctrl-w</name>
+    <desc>place winch</desc>
+   </key>
+   <key>
+    <name>w</name>
+    <desc>start winching</desc>
+   </key>
+   <key>
+    <name>W</name>
+    <desc>opens winch-hook</desc>
+   </key>
+   <key>
+    <name>Ctrl-o</name>
+    <desc>find aircraft for aerotow</desc>
+   </key>
+   <key>
+    <name>o</name>
+    <desc>locks aerotow-hook</desc>
+   </key>
+   <key>
+    <name>O</name>
+    <desc>opens aerotow-hook</desc>
+   </key>
   </help>
-
+  
 </sim>
+
+<input> 
+ <keyboard> 
+  <key n="15">
+    <name>Ctrl-o</name>
+    <desc>Find towplane</desc>
+    <binding>
+      <command>nasal</command>
+      <script>towing.findBestAIObject()</script>
+    </binding>
+  </key>  
+  <key n="111">
+    <name>o</name>
+    <desc>Locks aerotow-hook</desc>
+    <binding>
+      <command>nasal</command>
+      <script>towing.closeHitch()</script>
+    </binding>
+  </key>  
+  <key n="79">
+    <name>O</name>
+    <desc>Opens aerotow-hook</desc>
+    <binding>
+      <command>nasal</command>
+      <script>towing.releaseHitch("aerotow")</script>
+    </binding>
+  </key>
+  <key n="23">
+    <name>Ctrl-w</name>
+    <desc>Place Winch and hook in</desc>
+    <binding>
+      <command>nasal</command>
+      <script>towing.setWinchPositionAuto()</script>
+    </binding>
+  </key>
+  <key n="119">
+    <name>w</name>
+    <desc>Start winch</desc>
+    <binding>
+      <command>nasal</command>
+      <script>towing.runWinch()</script>
+    </binding>
+  </key>
+  <key n="87">
+    <name>W</name>
+    <desc>Opens winch-hook</desc>
+    <binding>
+      <command>nasal</command>
+      <script>towing.releaseHitch("winch")</script>
+    </binding>
+  </key>
+ </keyboard> 
+</input> 
 
 <!-- This binds the joystick's throttle slider to the spoilers. -->
 <nasal>
