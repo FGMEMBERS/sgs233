@@ -56,7 +56,7 @@ David Culp,  davidculp2@comcast.net
 -->
   <hitches>
    <aerotow>
-    <basename_force_jsbsim type="string">nose</basename_force_jsbsim>
+    <force_name_jsbsim type="string">nose</force_name_jsbsim>
     <local-pos-x type="float"> 2.1</local-pos-x>
     <local-pos-y type="float"> 0.0</local-pos-y>
     <local-pos-z type="float">-0.35</local-pos-z>
@@ -67,7 +67,7 @@ David Culp,  davidculp2@comcast.net
     </tow>
    </aerotow>
    <winch>
-    <basename_force_jsbsim type="string">belly</basename_force_jsbsim>
+    <force_name_jsbsim type="string">belly</force_name_jsbsim>
     <local-pos-x type="float"> 0.2</local-pos-x>
     <local-pos-y type="float"> 0.0</local-pos-y>
     <local-pos-z type="float">-0.7</local-pos-z>
