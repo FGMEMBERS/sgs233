@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+ 
+<!-- null electrical system -->
+
+<PropertyList>
+  <supplier>
+    <name>Battery</name>
+    <prop>/systems/electrical/suppliers/battery</prop>
+    <kind>battery</kind>
+    <volts>0</volts> 
+    <amps>0</amps>   
+  </supplier>
+</PropertyList>
