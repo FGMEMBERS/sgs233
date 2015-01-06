@@ -57,6 +57,12 @@ David Culp,  davidculp2@comcast.net
   <hitches>
    <aerotow>
     <force_name_jsbsim type="string">nose</force_name_jsbsim>
+    <!-- 
+      SGS-model location and JSBSim location do not match!
+      Here the towrope locations are adapted to the "wrong" model location
+      (instead of fixing the model location)
+    -->
+    <decoupled-force-and-rope-locations type="bool">true</decoupled-force-and-rope-locations>
     <local-pos-x type="float"> 2.1</local-pos-x>
     <local-pos-y type="float"> 0.0</local-pos-y>
     <local-pos-z type="float">-0.35</local-pos-z>
@@ -68,10 +74,11 @@ David Culp,  davidculp2@comcast.net
    </aerotow>
    <winch>
     <force_name_jsbsim type="string">belly</force_name_jsbsim>
+    <decoupled-force-and-rope-locations type="bool">true</decoupled-force-and-rope-locations>
     <local-pos-x type="float"> 0.2</local-pos-x>
     <local-pos-y type="float"> 0.0</local-pos-y>
     <local-pos-z type="float">-0.7</local-pos-z>
-    <automatic-release-angle-deg type="float">70.</automatic-release-angle-deg>
+    <automatic-release-angle-deg type="float">70.</automatic-release-angle-deg>    
     <winch>
      <initial-tow-length-m type="float">1000.</initial-tow-length-m>
      <max-tow-length-m type="float">1500.</max-tow-length-m> 
