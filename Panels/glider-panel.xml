@@ -20,7 +20,7 @@ _______________________________________________________________________
 
  <instruments>
 
-  <instrument include="../../Instruments/asi-160-knot.xml">
+  <instrument include="Aircraft/Instruments/asi-160-knot.xml">
    <name>Airspeed Indicator</name>
    <x>180</x>
    <y>100</y>
@@ -28,7 +28,7 @@ _______________________________________________________________________
    <h>90</h>
   </instrument>
 
-  <instrument include="../../Instruments/altimeter.xml">
+  <instrument include="Aircraft/Instruments/altimeter.xml">
    <name>Altimeter</name>
    <x>330</x>
    <y>100</y>
@@ -36,7 +36,7 @@ _______________________________________________________________________
    <h>90</h>
   </instrument>
 
-  <instrument include="../../Instruments/vertical.xml">
+  <instrument include="Aircraft/Instruments/vertical.xml">
    <name>Vertical Speed Indicator</name>
    <x>400</x>
    <y>50</y>
