@@ -16,6 +16,13 @@ David Culp,  davidculp2@comcast.net
   <flight-model>jsb</flight-model>
   <aero>sgs233</aero>
 
+  <tags>
+   <tag>glider</tag>
+   <tag>1960s</tag>
+   <tag>tow</tag>
+   <tag>unpowered</tag>
+  </tags>
+
   <startup>
    <units>feet</units>
   </startup>
